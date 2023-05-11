@@ -1,10 +1,11 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
+import Stock from "./components/Stock";
+import SelectCryptoBox from "./components/SelectCryptoBox";
 
 function App() {
-  const [count, setCount] = useState(0);
-
+  const [selectedCrypto, setSelectedCrypto] = useState<string>();
   return (
     <>
       <div className="border-b-2 bg-white p-2 flex justify-between items-center">
@@ -15,6 +16,7 @@ function App() {
           <option>PLN</option>
         </select>
       </div>
+      {!selectedCrypto && <SelectCryptoBox />}
     </>
   );
 }
