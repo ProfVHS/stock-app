@@ -17,7 +17,7 @@ function App() {
         <select
           className="p-1 box-content"
           onChange={(e) => setSelectedMarket(e.target.value)}
-          disabled={selectedCrypto}
+          disabled={selectedCrypto ? true : false}
         >
           <option value={"USD"}>USD</option>
           <option value={"EUR"}>EUR</option>
